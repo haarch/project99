@@ -1,7 +1,9 @@
-# Need ID token write permission to use OIDC
+name: AWS test
+
 on:
   workflow_dispatch:
 
+# Need ID token write permission to use OIDC
 permissions:
   id-token: write
 jobs:
