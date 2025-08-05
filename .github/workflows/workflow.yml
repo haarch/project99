@@ -18,4 +18,5 @@ jobs:
       - name: Additional steps
         run: |
           # Your commands that require AWS credentials
-          aws sts get-caller-identity 
+          aws sts get-caller-identity
+          aws s3 ls
