@@ -27,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: read
+      id-token: write
     concurrency:
       group: deploy-${{ inputs.environment }}
       cancel-in-progress: false
