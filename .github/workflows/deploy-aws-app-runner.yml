@@ -19,6 +19,9 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     environment:
@@ -27,7 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: read
-      id-token: write
     concurrency:
       group: deploy-${{ inputs.environment }}
       cancel-in-progress: false
