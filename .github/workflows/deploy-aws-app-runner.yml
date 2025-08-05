@@ -36,10 +36,11 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@main # Or a specific version
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::125616717413:role/haars-deleteme
           aws-region: us-east-1
+          role-session-name: github-actions-session
 
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v1
